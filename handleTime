@@ -1,0 +1,24 @@
+class handleTime{
+    protected $time=time();
+    protected $microtime=microtime();
+    
+    //秒数转时长  90秒 -> 0:1:30
+    function secToTime($times){
+        $result = '00:00:00';
+        if ($times>0) {
+            $hour = floor($times/3600);
+            $minute = floor(($times-3600 * $hour)/60);
+            $second = floor((($times-3600 * $hour) - 60 * $minute) % 60);
+            $result = $hour.':'.$minute.':'.$second;
+        }
+        return $result;
+    }
+    
+    //获取微秒
+    function getformatMT($len=3){
+        $num=pow(10,$len);
+        list($usec, $sec) =explode(' ', $this->microtime);
+        $time=$sec.floor($usec*$num);
+        return $time;
+    }
+}
