@@ -1,4 +1,8 @@
-# Classlib
-一个个人的类库
-php学习过程中常用的一些类和自己写的一些可能会用到的类
-不断完善补充中
+# BasicFrameWork
+
+## Description
+- 框架基础 Laravel-V8.0.3
+- 附带各种常用类库
+- 不断完善补充中
+
+## Update Log
